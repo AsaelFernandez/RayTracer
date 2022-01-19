@@ -1,3 +1,4 @@
+
 # RayTracer
 Raytracer from scratch developed by my self using Javaa and Object Oriented Programing.
 Materials:
@@ -6,15 +7,15 @@ Materials:
   Refractive
   
 Lights:
-  Directional Light
-  Point Light
-  Spot Light
+ - Directional Light
+ - Point Light
+ - Spot Light
   
 Objects:
-  Camera 
-  Sphere
-  Polygons
-  Any .Obj file you require 
+ - Camera 
+ - Sphere
+ - Polygons
+ - Any .Obj file you require 
   
 
 I implemented threads to accelerate the process.
