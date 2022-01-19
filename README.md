@@ -1,2 +1,2 @@
 # RayTracer
-Raytracer from scratch developed by my self and some help from my teacher.
+Raytracer from scratch developed by my self using Java, Object Oriented Programing and threads.
