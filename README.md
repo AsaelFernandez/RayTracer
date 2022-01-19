@@ -9,5 +9,12 @@ Lights:
   Directional Light
   Point Light
   Spot Light
+  
+Objects:
+  Camera 
+  Sphere
+  Polygons
+  Any .Obj file you require 
+  
 
-i implemented threads to accelerate the process.
+I implemented threads to accelerate the process.
