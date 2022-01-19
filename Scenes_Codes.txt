@@ -1,0 +1,86 @@
+Test Scene:
+
+scene01.setCamera(new Camera(new Vector3D(0, 0, -8), 160, 160, 1200, 1200, 8.2f, 50f));
+        scene01.addLight(new PointLight(new Vector3D(0f, 2f, 0f), new Lambert(Color.WHITE,0,0),10));
+        scene01.addLight(new PointLight(new Vector3D(0f, 1, 0f), new Lambert(Color.RED,0,0),4));
+        scene01.addObject(new Sphere(new Vector3D(-1f, -.1f, 12f), 0.5f,new Reflective(Color.RED,0.1,5)));
+        scene01.addObject(new Sphere(new Vector3D(-.8f, -1.f, 7f), 0.25f, new Reflective(new Color(171, 4, 196),0.1,5)));
+        scene01.addObject(new Sphere(new Vector3D(4.85f, 1f, 4.5f), 0.3f, new Lambert(Color.PINK,0,5)));
+        scene01.addObject(new Sphere(new Vector3D(-1.0f, -1.5f, 2.5f), 0.3f, new Reflective(new Color(192,192,192),0.1,5)));
+        scene01.addObject(new Sphere(new Vector3D(2.85f, 1f, 4.5f), 0.5f, new Reflective(Color.YELLOW,0.1,5)));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Cube.obj", new Vector3D(-1f, -1, 3f), new Refractive(new Color(241, 105, 79),0.1,5,2),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/CubeQuad.obj", new Vector3D(-3f, -2.5f, 3f), new Lambert(Color.GREEN,0,1),new float[]{1f,1f,1f},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/SmallTeapot.obj", new Vector3D(2f, -1.0f, 6f), new Reflective(Color.WHITE,0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ring.obj", new Vector3D(2f, -1.0f, 6f),new Reflective(Color.ORANGE,0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ground.obj", new Vector3D(0f, -4.0f, 0f), new Lambert(Color.WHITE,0,1),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(new Sphere(new Vector3D(2f, -1f, 3f), .8f, new Refractive(new Color(130, 195, 196),0.1,5,1.5)));
+###############################################################################################################################################################################################################################################################
+Raytracer_Scene_01:
+
+scene01.setCamera(new Camera(new Vector3D(0, 0, -8), 160, 160, 2000, 2000, 8.2f, 50f));
+        scene01.addLight(new DirectionalLight(Vector3D.ZERO(),new Vector3D(0,0,1), new Lambert(Color.WHITE,0,0),3));
+        scene01.addLight(new PointLight(new Vector3D(0,3,12), new Lambert(Color.BLUE,0,0),5));
+        scene01.addLight(new PointLight(new Vector3D(3,3,14), new Lambert(Color.BLUE,0,0),5));
+        scene01.addLight(new PointLight(new Vector3D(-3,3,14), new Lambert(Color.BLUE,0,0),5));
+        scene01.addLight(new PointLight(new Vector3D(6,3,16), new Lambert(Color.BLUE,0,0),5));
+        scene01.addLight(new PointLight(new Vector3D(-6,3,16), new Lambert(Color.BLUE,0,0),5));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Pillar.obj", new Vector3D(0f, -1, 12f), new Lambert(Color.GRAY,0.1,1),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Bunny.obj", new Vector3D(0f, 1, 12f), new Reflective(new Color(212, 175, 55),0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Pillar.obj", new Vector3D(3f, -1, 14f), new Lambert(Color.GRAY,0,1),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/SmallTeapot.obj", new Vector3D(3, 1.35, 14f), new Reflective(Color.RED,0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Pillar.obj", new Vector3D(6, -1, 16f), new Lambert(Color.GRAY,0,1),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Mono.obj", new Vector3D(6, 2.5, 16f), new Reflective(Color.GREEN,0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Pillar.obj", new Vector3D(-3, -1, 14f), new Lambert(Color.GRAY,0,1),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/SmallTeapot.obj", new Vector3D(-3, 1.35, 14f), new Reflective(Color.RED,0.1,5),new float[]{1,1,1},new int[]{-1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Pillar.obj", new Vector3D(-6, -1, 16f), new Lambert(Color.GRAY,0,1),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/f-16.obj", new Vector3D(-6, 2, 16f), new Reflective(Color.BLUE,0.1,5),new float[]{1,1,1},new int[]{1,1,-1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Cube.obj", new Vector3D(-3.55f, .5, 10), new Refractive(new Color(130, 195, 19),0.1,5,2),new float[]{2,2,2},new int[]{1,1,1}));
+        scene01.addObject(new Sphere(new Vector3D(3.7f, 2f, 10f), 1.5f, new Refractive(new Color(130, 195, 196),0.1,5,1.5)));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ground.obj", new Vector3D(0f, -4.0f, 0f), new Lambert(Color.WHITE,0,1),new float[]{1,1,1},new int[]{1,1,1}));
+##########################################################################################################################################################################################################################################################################
+Raytracer_Scene_02:
+
+scene01.setCamera(new Camera(new Vector3D(0, 0, -8), 160, 160, 2000, 2000, 8.2f, 50f));
+        scene01.addLight(new PointLight(new Vector3D(0,6,5), new Lambert(Color.WHITE,0,0),30));
+        scene01.addLight(new PointLight(new Vector3D(-7,6,15), new Lambert(Color.WHITE,0,0),30));
+        scene01.addLight(new PointLight(new Vector3D(7,6,15), new Lambert(Color.WHITE,0,0),30));
+        scene01.addLight(new PointLight(new Vector3D(0,6,25), new Lambert(Color.WHITE,0,0),30));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Pillar.obj", new Vector3D(-5, -1, 10f), new Lambert(new Color(124, 0, 173),0,1),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/SmallTeapot.obj", new Vector3D(6, 1.5, 14f), new Reflective(new Color(212,175,55),0.1,5),new float[]{1,1,1},new int[]{-1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/SmallTeapot.obj", new Vector3D(-5, 1.5, 10f), new Reflective(new Color(212,175,55),0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Pillar.obj", new Vector3D(6, -1, 14f), new Lambert(new Color(124, 0, 173),0,1),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(new Sphere(new Vector3D(0f, -1f, 10), 1f, new Lambert(Color.ORANGE,0,1)));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Wall.obj", new Vector3D(0, -1.15, 2), new Refractive(new Color(151, 195, 192),0.1,5,5),new float[]{.08f,.01f,.1f},new int[]{1,1,1}));
+        scene01.addObject(new Sphere(new Vector3D(2, -1.f, 12), .75f, new Reflective(new Color(192, 192, 192),0.1,5)));
+        scene01.addObject(new Sphere(new Vector3D(-2, -1.f, 12), .75f, new Reflective(new Color(192, 192, 192),0.1,5)));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane.obj", new Vector3D(3, 3, 12), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{-1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane.obj", new Vector3D(-2.2, 4, 12), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane.obj", new Vector3D(0, 1, 8), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(new Sphere(new Vector3D(0.3f, 3.5, 10), 1.5f, new Refractive(new Color(151, 195, 192),0.1,5,1.5)));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ground.obj", new Vector3D(0f, -4.0f, 0f ), new Lambert(new Color(134, 142, 255),0,1),new float[]{1,1,1},new int[]{-1,-1,1}));
+##########################################################################################################################################################################################################################################################################
+Raytracer_Scene_03:
+
+scene01.setCamera(new Camera(new Vector3D(0, 0, -8), 160, 160, 1200, 1200, 8.2f, 50f));
+        scene01.addLight(new PointLight(new Vector3D(0f, 6f, 0f), new Lambert(Color.WHITE,0,0),10));
+        scene01.addLight(new PointLight(new Vector3D(0f, 0, 2f), new Lambert(Color.WHITE,0,0),10));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ring2.obj", new Vector3D(4f, -1.0f, 16),new Reflective(Color.ORANGE,0.1,5),new float[]{1.3f,1.3f,1.3f},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane2.obj", new Vector3D(4, -1, 16), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{-1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ring3.obj", new Vector3D(5f, 2.0f, 14),new Reflective(Color.ORANGE,0.1,5),new float[]{1.3f,1.3f,1.3f},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane.obj", new Vector3D(5, 2, 14), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{-1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ring2.obj", new Vector3D(4f, 5.0f, 12),new Reflective(Color.ORANGE,0.1,5),new float[]{1.3f,1.3f,1.3f},new int[]{-1,1,-1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane2.obj", new Vector3D(4, 5, 12), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{-1,-1,-1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ring.obj", new Vector3D(0f, 6.0f, 10),new Reflective(Color.ORANGE,0.1,5),new float[]{1.3f,1.3f,1.3f},new int[]{-1,1,-1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane3.obj", new Vector3D(0, 5.6, 10), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ring2.obj", new Vector3D(-3f, 4, 8),new Reflective(Color.ORANGE,0.1,5),new float[]{1.3f,1.3f,1.3f},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane4.obj", new Vector3D(-3, 4, 8), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{-1,1,-1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ring4.obj", new Vector3D(-3.1f, .6f, 6),new Reflective(Color.ORANGE,0.1,5),new float[]{1.3f,1.3f,1.3f},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane5.obj", new Vector3D(-3.1f ,.6f, 6), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{1,1,1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ring.obj", new Vector3D(-.35, -1.0f, 4),new Reflective(Color.ORANGE,0.1,5),new float[]{1.3f,1.3f,1.3f},new int[]{-1,1,-1}));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/AirPlane3.obj", new Vector3D(-.35, -1, 4), new Reflective(new Color(107, 175, 203),0.1,5),new float[]{1,1,1},new int[]{1,-1,1}));
+        scene01.addObject(new Sphere(new Vector3D(4.5, 0.5, 10f), 1.5f, new Refractive(new Color(130, 195, 196),0.1,5,1.5)));
+        scene01.addObject(new Sphere(new Vector3D(2, 1.25, 6), .80f, new Refractive(new Color(130, 195, 196),0.1,5,1.5)));
+        //scene01.addObject(OBJReader.GetPolygon("ObjFiles/CubeQuadR.obj", new Vector3D(2, 0.5, 10f), new Refractive(new Color(193, 255, 250),0.1,5,2),new float[]{.65f,.65f,.65f},new int[]{1,1,1}));
+        scene01.addObject(new Sphere(new Vector3D(0, 2f, 10f), 2f, new Reflective(new Color(192,192,192),0.1,5)));
+        scene01.addObject(OBJReader.GetPolygon("ObjFiles/Ground.obj", new Vector3D(0f, -4.0f, 0f ), new Lambert(new Color(226, 208, 124),0,1),new float[]{1,1,1},new int[]{-1,-1,1}));
+
